@@ -1,27 +1,16 @@
-# TesteEstudo
+# Teste e estudo decoradores Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+Realizei este estudo com base na leitura e aplicação da documentação do Angular.
+Link: https://angular.io/guide/inputs-outputs
 
-## Development server
+### @Input() e @Output()
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+compartilham dados entre sí, pai pode mandar dados para o filho e vice-versa.
 
-## Code scaffolding
+@Input() --> usado em um componente filho, uma maneira de se comunicar com o seu componente pai
+permite que um componente pai atualize os dados do componente filho. Por outro lado, permite 
+que o componente filho envie dados para um componente pai.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+@Output() --> permite que os dados fluam do filho para o pai. Marca uma propriedade em um 
+componente filho como uma porta pela qual os dados podem passar do filho para o pai.
+O componente filho usa a propriedade para gerar um evento para notificar o pai sobre a alteração.

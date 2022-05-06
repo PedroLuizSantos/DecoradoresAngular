@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'TesteEstudo';
+
+  currentItem = 'Televisão';
+
+  items = ['Melão','Carne','Bacon'];
+
+  addItem(newItem:string){
+    this.items.push(newItem);
+  }
+
+  removeItem(item:any){
+    this.items.splice(item);
+  }
+
+
 }
